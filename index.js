@@ -204,3 +204,12 @@ secondGameElement.innerHTML = `
     <p class="card-total">${secondGame.name}</p>
 `;
 secondGameContainer.appendChild(secondGameElement);
+
+//extra feautres nav bar
+
+function scrollToSection(el) {
+    const element = document.querySelector(el);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}

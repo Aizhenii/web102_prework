@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="index.js"></script>
   </head>
 
   <body>
@@ -11,6 +12,14 @@
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
+
+        <nav>
+            <ul>
+                <li><a onclick="scrollToSection('header')">Home</a></li>
+                <li><a onclick="scrollToSection('stats')">Stats</a></li>
+                <li><a onclick="scrollToSection('games')">Games</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- background info about company -->
@@ -20,7 +29,7 @@
     </div>
 
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
+    <h2 id="stats">Stats</h2>
     <div class="stats-container">
         <div class="stats-card">
             <h3>Individual Contributions</h3>
@@ -48,7 +57,7 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
+    <h2 id="games">Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
@@ -58,7 +67,16 @@
     <div id="games-container">
 
     </div>
+    <script>
+        //extra feautres nav bar
+    
+        function scrollToSection(el) {
+        const element = document.getElementById(el);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+      </script>
 
-    <script type="module" src="index.js"></script>
   </body>
 </html>

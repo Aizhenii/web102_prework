@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #d4e1f0;
 }
 
 #tentacles {
@@ -11,14 +11,34 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: rgb(129, 190, 210);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    p {
+        color: white;
+    }
+    
 }
 
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-right: 10%;
+    width: 100%;
+    li {
+        display: inline;
+        list-style: none;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    li:hover {
+        color: white;
+    }
+}
 .stats-container {
     display: flex;
     flex-direction: row;   
